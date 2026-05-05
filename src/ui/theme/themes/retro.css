@@ -8,6 +8,13 @@
   --color-primary-dark: #5a8a7a;
   --color-accent: #ffd199;
 
+  --color-cloud: #ffffffd9;
+  --sky-gradient: linear-gradient(
+    180deg,
+    #f0f4f3 75%,
+    rgba(207, 163, 106, 0.169) 100%
+  );
+
   --color-txt: #333;
   --color-txt-on-primary: #333;
 }
