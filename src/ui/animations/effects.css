@@ -1,0 +1,20 @@
+.hoverGlow:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
+
+.crt {
+  animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}

@@ -1,0 +1,27 @@
+.stack {
+  display: flex;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.gap-sm {
+  gap: var(--space-sm);
+}
+
+.gap-md {
+  gap: var(--space-md);
+}
+
+.center {
+  align-items: center;
+}
+
+.between {
+  justify-content: space-between;
+}
