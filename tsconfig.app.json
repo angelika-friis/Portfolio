@@ -21,5 +21,10 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "vite.config.ts"]
+  "include": [
+    "src",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx",
+    "vite.config.ts"
+  ]
 }

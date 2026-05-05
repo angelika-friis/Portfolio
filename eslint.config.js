@@ -1,3 +1,5 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from 'eslint-plugin-storybook';
 import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -7,7 +9,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['storybook-static/**', 'dist/**', 'node_modules/**']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -32,4 +34,5 @@ export default defineConfig([
       'no-console': 'warn',
     },
   },
+  ...storybook.configs['flat/recommended'],
 ]);

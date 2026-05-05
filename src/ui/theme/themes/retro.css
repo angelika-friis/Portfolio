@@ -1,0 +1,13 @@
+[data-theme='retro'] {
+  --color-bg: #f0f4f3;
+  --color-card-bg: #fff;
+  --color-border: #5a8a7a;
+  --color-section-bg: #c9d8d1;
+
+  --color-primary: #c9d8d1;
+  --color-primary-dark: #5a8a7a;
+  --color-accent: #ffd199;
+
+  --color-txt: #333;
+  --color-txt-on-primary: #333;
+}
