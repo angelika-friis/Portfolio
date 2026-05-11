@@ -1,19 +1,20 @@
-import styles from './Section.module.css';
+import styles from './Window.module.css';
 
 type Props = {
   title: string;
   children: React.ReactNode;
 };
 
-export function Section({ title, children }: Props) {
+export function Window({ title, children }: Props) {
   return (
-    <section className={styles.section}>
+    <section className={styles.Window}>
       <div className={styles.window}>
         <div className={styles.header}>
           <span>{title}</span>
           <div className={styles.controls}>
-            <span className={`${styles.dot} ${styles.accent}`} />
-            <span className={styles.dot} />
+            <span className={styles.control} />
+            <span className={styles.control} />
+            <span className={`${styles.control} ${styles.red}`} />
           </div>
         </div>
 

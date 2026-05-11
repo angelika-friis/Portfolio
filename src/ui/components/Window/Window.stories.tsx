@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Section } from './Section';
+import { Window } from './Window';
 import { Card } from '../card/Card';
 import { Stack, Text } from '../primitives';
 import { Button } from '../button/Button';
 
-const meta: Meta<typeof Section> = {
-  title: 'UI/Section',
-  component: Section,
+const meta: Meta<typeof Window> = {
+  title: 'UI/Window',
+  component: Window,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Section>;
+type Story = StoryObj<typeof Window>;
 
 export const Default: Story = {
   args: {
-    title: 'ABOUT_ME.EXE',
+    title: 'about.txt',
     children: (
       <Stack>
         <Text>Webbdesign & App</Text>
