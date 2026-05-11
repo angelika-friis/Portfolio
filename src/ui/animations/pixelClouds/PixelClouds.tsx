@@ -42,6 +42,7 @@ export function PixelClouds() {
   const { theme } = useTheme();
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const clouds = useRef<Cloud[]>([]);
+  const size = useRef({ width: 0, height: 0 });
 
   const colorRef = useRef('#ffffff');
 
@@ -63,24 +64,56 @@ export function PixelClouds() {
   }, [theme]);
 
   useEffect(() => {
-    const canvas = canvasRef.current!;
-    const ctx = canvas.getContext('2d')!;
+    if (typeof CanvasRenderingContext2D === 'undefined') {
+      return;
+    }
+
+    const canvas = canvasRef.current;
+
+    if (!canvas) {
+      return;
+    }
+
+    const ctx = canvas.getContext('2d');
+
+    if (!ctx) {
+      return;
+    }
 
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const { width, height } = canvas.getBoundingClientRect();
+      const nextWidth = Math.max(0, Math.floor(width));
+      const nextHeight = Math.max(0, Math.floor(height));
+      const dpr = window.devicePixelRatio || 1;
+
+      size.current = {
+        width: nextWidth,
+        height: nextHeight,
+      };
+
+      canvas.width = Math.max(1, Math.floor(nextWidth * dpr));
+      canvas.height = Math.max(1, Math.floor(nextHeight * dpr));
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
     resize();
-    window.addEventListener('resize', resize);
+
+    const resizeObserver =
+      typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(resize);
+
+    if (resizeObserver) {
+      resizeObserver.observe(canvas);
+    } else {
+      window.addEventListener('resize', resize);
+    }
 
     // init clouds
     clouds.current = Array.from({ length: 20 }).map(() => {
       const shape = SHAPES[Math.floor(Math.random() * SHAPES.length)];
 
       return {
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height * 0.75,
+        x: Math.random() * size.current.width,
+        y: Math.random() * size.current.height * 0.75,
         speed: 0.1 + Math.random() * 0.5,
         pixelSize: 4 + Math.random() * 4,
         shape,
@@ -104,28 +137,42 @@ export function PixelClouds() {
       });
     };
 
+    let animationFrameId = 0;
+
     const loop = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const { width, height } = size.current;
+
+      ctx.clearRect(0, 0, width, height);
 
       clouds.current.forEach((cloud) => {
         cloud.x += cloud.speed;
 
         const width = cloud.shape[0].length * cloud.pixelSize;
 
-        if (cloud.x > canvas.width) {
+        if (cloud.x > size.current.width) {
           cloud.x = -width;
         }
 
         drawPixelCloud(ctx, cloud);
       });
 
-      requestAnimationFrame(loop);
+      animationFrameId = requestAnimationFrame(loop);
     };
 
     loop();
+
+    return () => {
+      resizeObserver?.disconnect();
+      window.removeEventListener('resize', resize);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
-  return <canvas ref={canvasRef} className={styles.canvas} />;
+  return (
+    <div className={styles.container}>
+      <canvas ref={canvasRef} className={styles.canvas} />
+    </div>
+  );
 }
 
 function getCloudColor() {
