@@ -7,7 +7,7 @@ type Props = {
 
 export function Window({ title, children }: Props) {
   return (
-    <section className={styles.Window}>
+    <section className={styles.section}>
       <div className={styles.window}>
         <div className={styles.header}>
           <span>{title}</span>

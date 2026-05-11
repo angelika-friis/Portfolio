@@ -9,7 +9,7 @@
 }
 
 .window {
-  background: var(--color-section-bg);
+  background: var(--color-window-bg);
 
   width: 100%;
   max-width: 1000px;
@@ -42,7 +42,7 @@
   width: 12px;
   height: 12px;
   display: block;
-  background: var(--color-section-bg);
+  background: var(--color-window-bg);
 }
 
 .red {

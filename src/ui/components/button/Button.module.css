@@ -3,7 +3,7 @@
   font-size: 14px;
 
   background-color: var(--color-accent);
-  border: 2px solid var(--color-txt);
+  border: 2px solid var(--color-accent-muted);
   color: var(--color-txt-on-primary);
 
   padding: var(--space-sm) var(--space-md);
