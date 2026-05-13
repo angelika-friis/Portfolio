@@ -1,8 +1,16 @@
+import { BrowserRouter, Route, Routes } from 'react-router';
+import MainLayout from './layouts/MainLayout/MainLayout';
+import HomePage from './pages/HomePage/HomePage';
+
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route index element={<HomePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
