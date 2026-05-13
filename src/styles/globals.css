@@ -1,0 +1,16 @@
+@import '../ui/theme/tokens.css';
+@import '../ui/theme/themes/retro.css';
+@import '../ui/theme/themes/dark.css';
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--color-txt);
+  background: var(--color-bg);
+  font-family: var(--font-main);
+}

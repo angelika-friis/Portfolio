@@ -1,8 +1,22 @@
-import { createContext } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { ThemeContext, type Theme } from '../../ui/theme/themeContext';
 
-export type Theme = 'retro' | 'dark';
+type ThemeProviderProps = {
+  children: ReactNode;
+  defaultTheme?: Theme;
+};
 
-export const ThemeContext = createContext({
-  theme: 'retro' as Theme,
-  setTheme: () => {},
-});
+export function ThemeProvider({
+  children,
+  defaultTheme = 'retro',
+}: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
+
+  const value = useMemo(() => ({ theme, setTheme }), [theme]);
+
+  return <ThemeContext value={value}>{children}</ThemeContext>;
+}
