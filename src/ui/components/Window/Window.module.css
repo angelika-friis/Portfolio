@@ -58,6 +58,10 @@
   padding: 48px 24px;
 }
 
+.contentFlush {
+  padding: 0;
+}
+
 .title {
   font-size: 28px;
   margin-bottom: 16px;

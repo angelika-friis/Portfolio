@@ -3,9 +3,14 @@ import styles from './Window.module.css';
 type Props = {
   title: string;
   children: React.ReactNode;
+  contentPadding?: boolean;
 };
 
-export function Window({ title, children }: Props) {
+export function Window({ title, children, contentPadding = true }: Props) {
+  const contentClassName = contentPadding
+    ? styles.content
+    : `${styles.content} ${styles.contentFlush}`;
+
   return (
     <section className={styles.section}>
       <div className={styles.window}>
@@ -18,7 +23,7 @@ export function Window({ title, children }: Props) {
           </div>
         </div>
 
-        <div className={styles.content}>{children}</div>
+        <div className={contentClassName}>{children}</div>
       </div>
     </section>
   );
