@@ -1,0 +1,57 @@
+.pixelCat {
+  --pixel-cat-size: 240px;
+  --pixel-cat-look-x: 0px;
+  --pixel-cat-look-y: 0px;
+
+  width: var(--pixel-cat-size);
+  aspect-ratio: 1;
+  display: inline-grid;
+  place-items: center;
+  image-rendering: pixelated;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  shape-rendering: crispEdges;
+  filter: drop-shadow(
+    8px 8px 0 color-mix(in srgb, var(--color-border) 28%, transparent)
+  );
+}
+
+.shadow {
+  fill: color-mix(in srgb, var(--color-border) 24%, transparent);
+}
+
+.outline,
+.face,
+.pupils {
+  fill: var(--color-border);
+}
+
+.fur {
+  fill: var(--color-accent);
+}
+
+.innerEar {
+  fill: #f48fb8;
+}
+
+.cheeks {
+  fill: color-mix(in srgb, var(--color-accent) 45%, #ffffff 55%);
+}
+
+.eyeWhite {
+  fill: var(--color-window-bg);
+}
+
+.pupils {
+  transform: translate(var(--pixel-cat-look-x), var(--pixel-cat-look-y));
+  transition: transform 90ms steps(2, end);
+}
+
+.highlight {
+  fill: color-mix(in srgb, var(--color-accent) 35%, #ffffff 65%);
+}
