@@ -1,0 +1,47 @@
+.pixelCat {
+  --pixel-cat-size: 240px;
+  --pixel-cat-look-x: 0px;
+  --pixel-cat-look-y: 0px;
+
+  width: var(--pixel-cat-size);
+  height: var(--pixel-cat-size);
+  display: inline-block;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+  shape-rendering: crispEdges;
+}
+
+.cat {
+  fill: #1b0508;
+}
+
+.black {
+  fill: black;
+}
+
+.body {
+  fill: orange;
+}
+
+.white {
+  fill: white;
+}
+
+.nose {
+  fill: pink;
+}
+
+.pattern {
+  fill: white;
+}
+
+.pupils {
+  fill: #1b0508;
+  transform: translate(var(--pixel-cat-look-x), var(--pixel-cat-look-y));
+  transition: transform 80ms linear;
+}
