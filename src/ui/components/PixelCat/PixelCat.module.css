@@ -4,54 +4,44 @@
   --pixel-cat-look-y: 0px;
 
   width: var(--pixel-cat-size);
-  aspect-ratio: 1;
-  display: inline-grid;
-  place-items: center;
-  image-rendering: pixelated;
+  height: var(--pixel-cat-size);
+  display: inline-block;
 }
 
 .sprite {
   width: 100%;
   height: 100%;
   display: block;
-  overflow: visible;
+  image-rendering: pixelated;
   shape-rendering: crispEdges;
-  filter: drop-shadow(
-    8px 8px 0 color-mix(in srgb, var(--color-border) 28%, transparent)
-  );
 }
 
-.shadow {
-  fill: color-mix(in srgb, var(--color-border) 24%, transparent);
+.cat {
+  fill: #1b0508;
 }
 
-.outline,
-.face,
-.pupils {
-  fill: var(--color-border);
+.black {
+  fill: black;
 }
 
-.fur {
-  fill: var(--color-accent);
+.body {
+  fill: orange;
 }
 
-.innerEar {
-  fill: #f48fb8;
+.white {
+  fill: white;
 }
 
-.cheeks {
-  fill: color-mix(in srgb, var(--color-accent) 45%, #ffffff 55%);
+.nose {
+  fill: pink;
 }
 
-.eyeWhite {
-  fill: var(--color-window-bg);
+.pattern {
+  fill: white;
 }
 
 .pupils {
+  fill: #1b0508;
   transform: translate(var(--pixel-cat-look-x), var(--pixel-cat-look-y));
-  transition: transform 90ms steps(2, end);
-}
-
-.highlight {
-  fill: color-mix(in srgb, var(--color-accent) 35%, #ffffff 65%);
+  transition: transform 80ms linear;
 }
