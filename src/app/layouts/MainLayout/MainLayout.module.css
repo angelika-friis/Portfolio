@@ -1,3 +1,32 @@
 .header {
   padding-top: 50px;
 }
+
+.desktopCompanion {
+  display: none;
+}
+
+.companionContent {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  line-height: 0;
+}
+
+.companionCat {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .desktopCompanion {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+
+    display: flex;
+    width: 168px;
+    min-height: 0;
+    padding: 0;
+  }
+}

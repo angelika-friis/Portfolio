@@ -12,11 +12,11 @@ export const CAT_MAP = [
   'booooooooooooooooooooooooooob........',
   'booooooooooooooooooooooooooob........',
   'boooobbbbbooooooooobbbbboooob........',
-  'booobbwwwbbooooooobbwwwbbooob........',
-  'booobwwwwwbooooooobwwwwwbooob........',
-  'booobwwwwwbooooooobwwwwwbooob........',
-  'booobwwwwwbooooooobwwwwwbooob........',
-  'booobbwwwbbooooooobbwwwbbooob........',
+  'booobbeeebbooooooobbeeebbooob........',
+  'booobeeeeebooooooobeeeeebooob........',
+  'booobeeeeebooooooobeeeeebooob........',
+  'booobeeeeebooooooobeeeeebooob........',
+  'booobbeeebbooooooobbeeebbooob........',
   'boooobbbbbooonnnooobbbbboooob........',
   'booooooooooooonooooooooooooob........',
   '.booooooooooooooooooooooooob.........',
@@ -52,7 +52,7 @@ export function getPixelType(cell: string): PixelType | null {
       return 'border';
     case 'o':
       return 'body';
-    case 'w':
+    case 'e':
       return 'eyes';
     case 'n':
       return 'nose';

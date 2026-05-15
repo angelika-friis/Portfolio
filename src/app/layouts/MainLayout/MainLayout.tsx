@@ -1,6 +1,8 @@
 import { Outlet } from 'react-router';
 import styles from './MainLayout.module.css';
+import { PixelCat } from '../../../ui/components/PixelCat';
 import { Stack, Text } from '../../../ui/components/primitives';
+import { Window } from '../../../ui/components/Window/Window';
 
 function MainLayout() {
   return (
@@ -21,6 +23,15 @@ function MainLayout() {
       </main>
 
       <footer className={styles.footer}></footer>
+
+      <Window
+        title="cat"
+        className={styles.desktopCompanion}
+        contentClassName={styles.companionContent}
+        contentPadding={false}
+      >
+        <PixelCat className={styles.companionCat} size={92} />
+      </Window>
     </>
   );
 }

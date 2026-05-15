@@ -3,16 +3,30 @@ import styles from './Window.module.css';
 type Props = {
   title: string;
   children: React.ReactNode;
+  className?: string;
+  contentClassName?: string;
   contentPadding?: boolean;
 };
 
-export function Window({ title, children, contentPadding = true }: Props) {
-  const contentClassName = contentPadding
+export function Window({
+  title,
+  children,
+  className,
+  contentClassName,
+  contentPadding = true,
+}: Props) {
+  const sectionClassName = className
+    ? `${styles.section} ${className}`
+    : styles.section;
+  const baseContentClassName = contentPadding
     ? styles.content
     : `${styles.content} ${styles.contentFlush}`;
+  const contentClasses = contentClassName
+    ? `${baseContentClassName} ${contentClassName}`
+    : baseContentClassName;
 
   return (
-    <section className={styles.section}>
+    <section className={sectionClassName}>
       <div className={styles.window}>
         <div className={styles.header}>
           <span>{title}</span>
@@ -23,7 +37,7 @@ export function Window({ title, children, contentPadding = true }: Props) {
           </div>
         </div>
 
-        <div className={contentClassName}>{children}</div>
+        <div className={contentClasses}>{children}</div>
       </div>
     </section>
   );
