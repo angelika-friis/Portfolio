@@ -44,16 +44,16 @@ export const CAT_MAP = [
   '......bbbbbbbbbbbbbbbbb..............',
 ] as const;
 
-export type PixelType = 'black' | 'white' | 'body' | 'nose' | 'pattern';
+export type PixelType = 'border' | 'eyes' | 'body' | 'nose' | 'pattern';
 
 export function getPixelType(cell: string): PixelType | null {
   switch (cell) {
     case 'b':
-      return 'black';
+      return 'border';
     case 'o':
       return 'body';
     case 'w':
-      return 'white';
+      return 'eyes';
     case 'n':
       return 'nose';
     case 'p':

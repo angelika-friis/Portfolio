@@ -20,16 +20,16 @@
   fill: #1b0508;
 }
 
-.black {
+.border {
   fill: black;
 }
 
 .body {
-  fill: orange;
+  fill: var(--color-cat-body);
 }
 
-.white {
-  fill: white;
+.eyes {
+  fill: var(--color-cat-eyes);
 }
 
 .nose {

@@ -17,6 +17,9 @@
     rgba(207, 163, 106, 0.169) 100%
   );
 
+  --color-cat-body: #ffa600fe;
+  --color-cat-eyes: rgb(162, 230, 137);
+
   --color-txt: #333;
   --color-txt-on-primary: #333;
 }
