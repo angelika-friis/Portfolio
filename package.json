@@ -15,6 +15,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@iconify-react/pixel": "^1.0.3",
+    "@iconify-react/pixelarticons": "^1.0.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router": "^7.15.0"

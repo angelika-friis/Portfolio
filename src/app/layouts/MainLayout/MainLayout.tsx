@@ -1,14 +1,36 @@
 import { Outlet } from 'react-router';
 import styles from './MainLayout.module.css';
+import { Button } from '../../../ui/components/button/Button';
 import { PixelCat } from '../../../ui/components/PixelCat';
 import { Stack, Text } from '../../../ui/components/primitives';
 import { Window } from '../../../ui/components/Window/Window';
+import { useTheme } from '../../../ui/theme/useTheme';
+import MoonIcon from '@iconify-react/pixelarticons/moon';
+import SunIcon from '@iconify-react/pixel/sun';
 
 function MainLayout() {
+  const { theme, setTheme } = useTheme();
+  const isDarkMode = theme === 'dark';
+  const nextTheme = isDarkMode ? 'retro' : 'dark';
+
   return (
     <>
       <header className={styles.header}>
-        <Stack direction="vertical" align="center">
+        <Button
+          className={styles.themeToggle}
+          type="button"
+          aria-pressed={isDarkMode}
+          aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+          onClick={() => setTheme(nextTheme)}
+        >
+          {isDarkMode ? <SunIcon height="1em" /> : <MoonIcon height="1em" />}
+        </Button>
+
+        <Stack
+          className={styles.headerTitle}
+          direction="vertical"
+          align="center"
+        >
           <Text as="h1" variant="display">
             ~/dev/portfolio
           </Text>
