@@ -34,7 +34,7 @@ export const Default: Story = {
               adipisci nesciunt quasi illo iste laboriosam placeat dolores
               accusantium quis atque veritatis delectus odio.
             </Text>
-            <Button>contact me</Button>
+            <Button variant="accent">contact me</Button>
           </Stack>
         </Card>
       </Stack>

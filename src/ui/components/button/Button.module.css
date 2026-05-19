@@ -2,10 +2,18 @@
   font-family: var(--font-main);
   font-size: 14px;
 
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+}
+
+.accent {
   background-color: var(--color-accent);
   border: 2px solid var(--color-accent-muted);
   color: var(--color-txt-on-primary);
+}
 
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius);
+.primary {
+  background-color: var(--color-window-bg);
+  border: 2px solid var(--color-border);
+  color: var(--color-txt);
 }

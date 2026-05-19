@@ -18,6 +18,7 @@ function MainLayout() {
       <header className={styles.header}>
         <Button
           className={styles.themeToggle}
+          variant="primary"
           type="button"
           aria-pressed={isDarkMode}
           aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
