@@ -21,9 +21,21 @@ function HomePage() {
           <PixelClouds />
         </Window>
       </Stack>
-      <Window title="my_companion.img">
-        <PixelCat />
-      </Window>
+      <Stack direction="horizontal">
+        <Window title="about_me.txt">
+          <Text as="p">{`> I want to make websites and apps that are easy to use, secure and accesible for everyone.`}</Text>
+          <Text as="p">{`> I am graduating as a fullstack developer with a focus on websecurtiy in the MERN-stack.`}</Text>
+          <Text as="p">{`> In my 6 month internship I got to develop a backend and api for a android nativ pos-application in Kotlin. So much fun!`}</Text>
+          <Text as="p">{``}</Text>
+          <Text
+            as="p"
+            muted={true}
+          >{`> I love structure and I am constantly looking for better and cleaner structure for my files and code. My brain loves it and it makes debugging and cooperation easier.`}</Text>
+        </Window>
+        <Window title="my_companion.img">
+          <PixelCat />
+        </Window>
+      </Stack>
     </div>
   );
 }
