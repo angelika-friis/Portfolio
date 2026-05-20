@@ -2,11 +2,12 @@ import { PixelClouds } from '../../../ui/animations/pixelClouds/PixelClouds';
 import { PixelCat } from '../../../ui/components/PixelCat';
 import { Stack, Text } from '../../../ui/components/primitives';
 import { Window } from '../../../ui/components/Window/Window';
+import styles from './HomePage.module.css';
 
 function HomePage() {
   return (
     <div>
-      <Stack direction="horizontal">
+      <Stack direction="horizontal" className={styles.section1}>
         <Stack direction="vertical">
           <Window title="hello.txt">
             <Text as="p">{`> Hi! I'm Angelika.`}</Text>
@@ -17,7 +18,11 @@ function HomePage() {
             <Text as="p">{`> So... Need a fullstack developer?`}</Text>
           </Window>
         </Stack>
-        <Window title="clouds.img" contentPadding={false}>
+        <Window
+          title="clouds.img"
+          contentPadding={false}
+          className={styles.cloudWindow}
+        >
           <PixelClouds />
         </Window>
       </Stack>
