@@ -1,0 +1,15 @@
+.Chip {
+  display: inline-flex;
+  box-sizing: border-box;
+  width: fit-content;
+  min-width: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border: 2px solid var(--color-border);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  line-height: 1;
+  color: var(--color-txt);
+  background: var(--color-primary-muted);
+}

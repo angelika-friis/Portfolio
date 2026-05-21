@@ -4,7 +4,8 @@
   --color-window-bg: #343a36;
   --color-border: #5f7a6d;
 
-  --color-primary: #83c9b2;
+  --color-primary-light: #83c9b2;
+  --color-primary-muted: #485b54;
   --color-primary-dark: #5a8a7a;
   --color-accent: #cfa46a;
   --color-accent-muted: #a98a62;

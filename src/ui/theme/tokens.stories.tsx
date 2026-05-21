@@ -32,7 +32,7 @@ export const Colors: StoryObj = {
       </div>
       <div
         style={{
-          background: 'var(--color-primary)',
+          background: 'var(--color-primary-light)',
           padding: 20,
           color: 'var(--color-txt-on-primary)',
           width: '100%',
