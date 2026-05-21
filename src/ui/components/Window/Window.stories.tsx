@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Window } from './Window';
 import { Card } from '../card/Card';
 import { Stack, Text } from '../primitives';
-import { Button } from '../button/Button';
+import { Button } from '../Button';
 
 const meta: Meta<typeof Window> = {
   title: 'UI/Window',

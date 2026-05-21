@@ -1,7 +1,11 @@
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-main);
   font-size: 14px;
-
+  line-height: 1;
+  text-decoration: none;
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius);
 }

@@ -1,7 +1,9 @@
 import { PixelClouds } from '../../../ui/animations/pixelClouds/PixelClouds';
 import { PixelCat } from '../../../ui/components/PixelCat';
+import { ProjectShowcase } from '../../../ui/components/ProjectShowcase';
 import { Stack, Text } from '../../../ui/components/primitives';
 import { Window } from '../../../ui/components/Window/Window';
+import { projects } from '../../data/projects';
 import styles from './HomePage.module.css';
 
 function HomePage() {
@@ -41,6 +43,7 @@ function HomePage() {
           <PixelCat />
         </Window>
       </Stack>
+      <ProjectShowcase projects={projects} />
     </div>
   );
 }

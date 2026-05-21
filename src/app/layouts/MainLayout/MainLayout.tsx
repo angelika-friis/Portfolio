@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router';
 import styles from './MainLayout.module.css';
-import { Button } from '../../../ui/components/button/Button';
+import { Button } from '../../../ui/components/Button';
 import { PixelCat } from '../../../ui/components/PixelCat';
 import { Stack, Text } from '../../../ui/components/primitives';
 import { Window } from '../../../ui/components/Window/Window';
