@@ -21,7 +21,7 @@
   padding-top: 34px;
 }
 
-.desktopCompanion {
+.desktopCompanion.desktopCompanion {
   display: none;
 }
 
@@ -37,7 +37,7 @@
 }
 
 @media (min-width: 1024px) {
-  .desktopCompanion {
+  .desktopCompanion.desktopCompanion {
     position: fixed;
     top: 16px;
     right: 16px;

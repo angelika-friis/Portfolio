@@ -9,8 +9,8 @@ import styles from './HomePage.module.css';
 function HomePage() {
   return (
     <div>
-      <Stack direction="horizontal" className={styles.section1}>
-        <Stack direction="vertical">
+      <Stack direction="horizontal" className={styles.introSection}>
+        <Stack direction="vertical" className={styles.introCards}>
           <Window title="hello.txt">
             <Text as="p">{`> Hi! I'm Angelika.`}</Text>
             <Text as="p">{`> I develop websites and apps.`}</Text>
@@ -28,7 +28,7 @@ function HomePage() {
           <PixelClouds />
         </Window>
       </Stack>
-      <Stack direction="horizontal">
+      <Stack direction="horizontal" className={styles.section2}>
         <Window title="about_me.txt">
           <Text as="p">{`> I want to make websites and apps that are easy to use, secure and accesible for everyone.`}</Text>
           <Text as="p">{`> I am graduating as a fullstack developer with a focus on websecurtiy in the MERN-stack.`}</Text>

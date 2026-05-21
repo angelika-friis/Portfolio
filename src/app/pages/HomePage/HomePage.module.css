@@ -1,7 +1,23 @@
-.section1 {
+.introSection {
   width: 100%;
 }
 
 .cloudWindow {
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  .introSection,
+  .section2 {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .introCards {
+    height: auto;
+  }
+
+  .cloudWindow {
+    height: 100px;
+  }
 }
