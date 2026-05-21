@@ -2,7 +2,7 @@ import type { ReactNode, HTMLAttributes } from 'react';
 import styles from './Stack.module.css';
 
 type Direction = 'vertical' | 'horizontal';
-type Gap = 'sm' | 'md';
+type Gap = 'sm' | 'md' | 'xs';
 
 type Props = {
   children: ReactNode;

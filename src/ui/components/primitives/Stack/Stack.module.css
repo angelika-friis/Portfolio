@@ -11,6 +11,10 @@
 }
 
 .gap-sm {
+  gap: var(--space-xs);
+}
+
+.gap-sm {
   gap: var(--space-sm);
 }
 
