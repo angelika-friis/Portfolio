@@ -1,6 +1,6 @@
 import { PixelClouds } from '../../../ui/animations/pixelClouds/PixelClouds';
 import { PixelCat } from '../../../ui/components/PixelCat';
-import { ProjectShowcase } from '../../../ui/components/ProjectShowcase';
+import { ProjectShowcase } from './components/ProjectShowcase';
 import { Stack, Text } from '../../../ui/components/primitives';
 import { Window } from '../../../ui/components/Window/Window';
 import { projects } from '../../data/projects';

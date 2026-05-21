@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { projects } from '../../../app/data/projects';
+import { projects } from '../../../../data/projects';
 import { ProjectShowcase } from './ProjectShowcase';
 
 const meta: Meta<typeof ProjectShowcase> = {
-  title: 'UI/ProjectShowcase',
+  title: 'app/ProjectShowcase',
   component: ProjectShowcase,
   parameters: {
     layout: 'fullscreen',

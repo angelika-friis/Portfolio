@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
-import type { Project } from '../../../types/project';
-import { Window } from '../Window/Window';
-import { Chip } from '../Chip';
-import { Button } from '../Button';
+import type { Project } from '../../../../../types/project.ts';
+import { Window } from '../../../../../ui/components/Window/Window';
+import { Chip } from '../../../../../ui/components/Chip';
+import { Button } from '../../../../../ui/components/Button';
 import styles from './ProjectShowcase.module.css';
 
 type Props = {
