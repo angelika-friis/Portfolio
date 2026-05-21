@@ -2,6 +2,12 @@
 @import '../ui/theme/themes/retro.css';
 @import '../ui/theme/themes/dark.css';
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body,
 #root {

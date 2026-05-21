@@ -23,6 +23,7 @@
   },
   "include": [
     "src",
+    "e2e/**/*.ts",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
     "vite.config.ts"
