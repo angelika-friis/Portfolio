@@ -14,9 +14,19 @@ body,
   min-height: 100%;
 }
 
+body,
+#root {
+  min-height: 100dvh;
+}
+
 body {
   margin: 0;
   color: var(--color-txt);
   background: var(--color-bg);
   font-family: var(--font-main);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }

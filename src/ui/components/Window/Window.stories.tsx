@@ -18,8 +18,8 @@ export const Default: Story = {
     title: 'about.txt',
     children: (
       <Stack>
-        <Text>Webbdesign & App</Text>
-        <Text>Responsiv & Accessible</Text>
+        <Text>Web Design & App</Text>
+        <Text>Responsive & Accessible</Text>
         <Card title="Digital me">
           <img
             src="https://raw.githubusercontent.com/KennethJAllen/proper-pixel-art/main/assets/blob/result.png"

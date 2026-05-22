@@ -26,7 +26,7 @@ export const projects: Record<string, Project> = {
     title: 'Weather prognosis',
     fileName: 'weather-prognosis.exe',
     description:
-      'Search for weather prognosis with sun rise and set for a location or current location. Favorited locatations are stored localy in a cookie.',
+      'Search for weather prognosis with sunrise and sunset for a location or current location. Favorited locations are stored locally in a cookie.',
     technologies: ['React', 'Cookies', 'Geolocation', 'CSS'],
     links: [
       {
@@ -38,10 +38,10 @@ export const projects: Record<string, Project> = {
   },
   webbShop: {
     id: 'webbShop',
-    title: 'Webb shop Top Style',
+    title: 'Webshop Top Style',
     fileName: 'top-style.exe',
     description:
-      'A fullstack webbshop. Frontend and backend communicates by REST-API. User login. Authentication with JWT',
+      'A full-stack webshop. Frontend and backend communicate by REST API. User login. Authentication with JWT.',
     technologies: [
       'JavaScript',
       'React',
@@ -65,8 +65,8 @@ export const projects: Record<string, Project> = {
     title: 'Chatify',
     fileName: 'chatify.exe',
     description:
-      'A website where users can chat. Security measures like protected routing, JWT-authentication, CSP, sanitization of input. While the site was running I used Sentry to logg and monitore with Sentry.',
-    technologies: ['React', 'Sentry', 'JWT', 'Content Securtiy Policy'],
+      'A website where users can chat. Security measures include protected routing, JWT authentication, CSP and input sanitization. While the site was running, I used Sentry to log and monitor it.',
+    technologies: ['React', 'Sentry', 'JWT', 'Content Security Policy'],
     links: [
       {
         label: 'Source Code',
@@ -80,8 +80,8 @@ export const projects: Record<string, Project> = {
     title: 'Gomuku - a five in a row game',
     fileName: 'gomuku.exe',
     description:
-      'A game for five in a row. A collaborative project with a separate frontend, component library and backend. User login and plays agains eachother. A websocket gets the latest move. Storytell was used for the component library to preview components.',
-    technologies: ['React', 'Webbsocket', 'Storytell', 'CSS'],
+      'A five-in-a-row game. A collaborative project with a separate frontend, component library and backend. Users log in and play against each other. A WebSocket gets the latest move. Storybook was used for the component library to preview components.',
+    technologies: ['React', 'WebSocket', 'Storybook', 'CSS'],
     links: [
       {
         label: 'Source Code',

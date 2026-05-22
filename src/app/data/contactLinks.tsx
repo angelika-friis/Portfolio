@@ -20,13 +20,13 @@ export const contactLinks: ContactLink[] = [
   {
     href: 'https://github.com/angelika-friis',
     icon: <GithubIcon height="2em" />,
-    title: 'Github',
+    title: 'GitHub',
     text: 'angelika-friis',
   },
   {
     href: 'https://www.linkedin.com/in/angelika-friis/',
     icon: <LinkedinIcon height="2em" />,
-    title: 'Linkedin',
+    title: 'LinkedIn',
     text: 'angelikafriis',
   },
 ];

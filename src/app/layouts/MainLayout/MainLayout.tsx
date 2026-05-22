@@ -36,7 +36,7 @@ function MainLayout() {
             ~/dev/portfolio
           </Text>
           <Text as="p" variant="caption">
-            Fullstack Developer
+            Full-stack Developer
           </Text>
         </Stack>
       </header>
@@ -49,7 +49,7 @@ function MainLayout() {
         <Stack direction="horizontal" align="center">
           <ExternalLinkSolidIcon height="1rem" />
           <Text as="p" weight="bold">
-            Checkout project
+            Check out project
           </Text>
         </Stack>
         <nav className={styles.footerLinks} aria-label="Contact links">

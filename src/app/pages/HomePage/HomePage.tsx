@@ -20,7 +20,7 @@ function HomePage() {
           </Window>
           <Window title="updates.txt">
             <Text as="p">{`> Graduating summer 2026.`}</Text>
-            <Text as="p">{`> So... Need a fullstack developer?`}</Text>
+            <Text as="p">{`> So... Need a full-stack developer?`}</Text>
           </Window>
         </Stack>
         <Window
@@ -33,12 +33,12 @@ function HomePage() {
       </Stack>
       <Stack direction="horizontal" className={styles.section2}>
         <Window title="about_me.txt">
-          <Text as="p">{`> I want to make websites and apps that are easy to use, secure and accesible for everyone.`}</Text>
-          <Text as="p">{`> I am graduating as a fullstack developer with a focus on websecurtiy in the MERN-stack.`}</Text>
+          <Text as="p">{`> I want to make websites and apps that are easy to use, secure and accessible for everyone.`}</Text>
+          <Text as="p">{`> I am graduating as a full-stack developer with a focus on web security in the MERN stack.`}</Text>
         </Window>
         <Window title="contact.cfg">
           <Stack direction="vertical">
-            <Text as="p">Lets get in contact!</Text>
+            <Text as="p">Let's get in contact!</Text>
             {contactLinks.map((contactLink) => (
               <ContactButtons key={contactLink.href} {...contactLink} />
             ))}
