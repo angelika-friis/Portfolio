@@ -1,7 +1,6 @@
 import GithubIcon from '@iconify-react/pixel/github';
 import LinkedinIcon from '@iconify-react/pixel/linkedin';
 import MailIcon from '@iconify-react/pixelarticons/mail';
-
 import { PixelClouds } from '../../../ui/animations/pixelClouds/PixelClouds';
 import { PixelCat } from '../../../ui/components/PixelCat';
 import { ProjectShowcase } from './components/ProjectShowcase';
@@ -30,6 +29,30 @@ const contactLinks = [
     title: 'Linkedin',
     text: 'angelikafriis',
   },
+];
+
+const primaryTechStack = [
+  'React',
+  'JavaScript',
+  'TypeScript',
+  'HTML',
+  'CSS',
+  'Node.js',
+  'MongoDB',
+  'VSCode',
+  'Git',
+  'Kotlin',
+  'Android Studio',
+];
+
+const experienceTechStack = [
+  'Python',
+  'Next.js',
+  'MUI',
+  'Docker',
+  'SQLite',
+  'Blazor',
+  'C++',
 ];
 
 function HomePage() {
@@ -71,6 +94,36 @@ function HomePage() {
           <PixelCat />
         </Window>
       </Stack>
+      <section className={styles.techStackSection}>
+        <Window title="tech_stack.md">
+          <Stack direction="vertical" gap="md" className={styles.techStack}>
+            <div>
+              <Text as="h2" variant="heading" size="lg">
+                {`> What I use the most`}
+              </Text>
+              <ul className={styles.techBadgeList}>
+                {primaryTechStack.map((tech) => (
+                  <li key={tech} className={styles.techBadge}>
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <Text as="h3" variant="heading" size="lg">
+                {`> Experience in`}
+              </Text>
+              <ul className={styles.techBadgeList}>
+                {experienceTechStack.map((tech) => (
+                  <li key={tech} className={styles.techBadge}>
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Stack>
+        </Window>
+      </section>
       <ProjectShowcase projects={projects} />
     </div>
   );

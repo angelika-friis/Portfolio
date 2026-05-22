@@ -1,9 +1,7 @@
 import { Outlet } from 'react-router';
 import styles from './MainLayout.module.css';
 import { Button } from '../../../ui/components/Button';
-import { PixelCat } from '../../../ui/components/PixelCat';
 import { Stack, Text } from '../../../ui/components/primitives';
-import { Window } from '../../../ui/components/Window/Window';
 import { useTheme } from '../../../ui/theme/useTheme';
 import MoonIcon from '@iconify-react/pixelarticons/moon';
 import SunIcon from '@iconify-react/pixel/sun';
@@ -46,15 +44,6 @@ function MainLayout() {
       </main>
 
       <footer className={styles.footer}></footer>
-
-      {/* <Window
-        title="cat"
-        className={styles.desktopCompanion}
-        contentClassName={styles.companionContent}
-        contentPadding={false}
-      >
-        <PixelCat className={styles.companionCat} size={92} />
-      </Window> */}
     </>
   );
 }

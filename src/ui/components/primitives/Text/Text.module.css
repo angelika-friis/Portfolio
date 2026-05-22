@@ -1,7 +1,7 @@
 .text {
   margin: 0;
   font-family: var(--font-main);
-  color: var(--color-txt, inherit);
+  color: inherit;
 }
 
 .display,
@@ -79,7 +79,7 @@
 }
 
 .default {
-  color: var(--color-txt, inherit);
+  color: inherit;
 }
 
 .muted {
