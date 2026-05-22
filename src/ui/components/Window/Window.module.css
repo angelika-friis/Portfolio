@@ -17,7 +17,7 @@
   position: relative;
 
   border: 6px solid var(--color-border);
-  box-shadow: 8px 8px 0 color-mix(in srgb, var(--color-border) 70%, #fff 30%);
+  box-shadow: 8px 8px 0 var(--color-window-shadow);
 }
 
 .header {
