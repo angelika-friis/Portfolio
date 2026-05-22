@@ -5,6 +5,8 @@ import { Stack, Text } from '../../../ui/components/primitives';
 import { useTheme } from '../../../ui/theme/useTheme';
 import MoonIcon from '@iconify-react/pixelarticons/moon';
 import SunIcon from '@iconify-react/pixel/sun';
+import ExternalLinkSolidIcon from '@iconify-react/pixel/external-link-solid';
+import { contactLinks } from '../../data/contactLinks';
 
 function MainLayout() {
   const { theme, setTheme } = useTheme();
@@ -43,7 +45,21 @@ function MainLayout() {
         <Outlet />
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <Stack direction="horizontal" align="center">
+          <ExternalLinkSolidIcon height="1rem" />
+          <Text as="p" weight="bold">
+            Checkout project
+          </Text>
+        </Stack>
+        <nav className={styles.footerLinks} aria-label="Contact links">
+          {contactLinks.map(({ href, icon }) => (
+            <a key={href} href={href} className={styles.footerLink}>
+              {icon}
+            </a>
+          ))}
+        </nav>
+      </footer>
     </>
   );
 }

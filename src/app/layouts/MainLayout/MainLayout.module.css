@@ -21,19 +21,51 @@
   padding-top: 34px;
 }
 
-.desktopCompanion.desktopCompanion {
-  display: none;
+.main {
+  width: 100%;
 }
 
-.companionContent {
+.footer {
   display: flex;
-  justify-content: center;
-  padding: 8px;
-  line-height: 0;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 32px;
+  padding: var(--space-md);
+  border-top: 2px solid var(--color-border);
+  background-color: var(--color-primary-muted);
 }
 
-.companionCat {
-  display: block;
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.footerLink {
+  display: inline-flex;
+  gap: var(--space-sm);
+  align-items: center;
+  color: var(--color-txt);
+  text-decoration: none;
+  padding: var(--space-sm);
+  border: 2px solid transparent;
+}
+
+.footerLink:hover,
+.footerLink:focus-visible {
+  border-color: var(--color-border);
+  background-color: var(--color-primary-muted);
+  outline: none;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1024px) {
