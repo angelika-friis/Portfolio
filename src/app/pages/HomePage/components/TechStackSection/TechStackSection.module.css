@@ -1,0 +1,45 @@
+.techStackSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 40px 40px;
+}
+
+.techStack {
+  text-align: left;
+}
+
+.techStack h2,
+.techStack h3 {
+  margin: 0 0 14px;
+}
+
+.techBadgeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.techBadge {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 6px 10px;
+  border: 2px solid var(--color-border);
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-txt);
+  background: var(--color-primary-muted);
+  box-shadow: 3px 3px 0 var(--color-window-shadow);
+}
+
+@media (max-width: 800px) {
+  .techStackSection {
+    padding: 0 24px 24px;
+  }
+}

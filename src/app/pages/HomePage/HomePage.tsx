@@ -1,59 +1,13 @@
-import GithubIcon from '@iconify-react/pixel/github';
-import LinkedinIcon from '@iconify-react/pixel/linkedin';
-import MailIcon from '@iconify-react/pixelarticons/mail';
 import { PixelClouds } from '../../../ui/animations/pixelClouds/PixelClouds';
 import { PixelCat } from '../../../ui/components/PixelCat';
 import { ProjectShowcase } from './components/ProjectShowcase';
+import { TechStackSection } from './components/TechStackSection';
 import { ContactButtons } from './components/ContactButton';
 import { Stack, Text } from '../../../ui/components/primitives';
 import { Window } from '../../../ui/components/Window/Window';
+import { contactLinks } from '../../data/contactLinks';
 import { projects } from '../../data/projects';
 import styles from './HomePage.module.css';
-
-const contactLinks = [
-  {
-    href: 'mailto: angelikafriis@gmail.com',
-    icon: <MailIcon height="2em" />,
-    title: 'Email me',
-    text: 'angelikafriis@gmail.com',
-  },
-  {
-    href: 'https://github.com/angelika-friis',
-    icon: <GithubIcon height="2em" />,
-    title: 'Github',
-    text: 'angelika-friis',
-  },
-  {
-    href: 'https://www.linkedin.com/in/angelika-friis/',
-    icon: <LinkedinIcon height="2em" />,
-    title: 'Linkedin',
-    text: 'angelikafriis',
-  },
-];
-
-const primaryTechStack = [
-  'React',
-  'JavaScript',
-  'TypeScript',
-  'HTML',
-  'CSS',
-  'Node.js',
-  'MongoDB',
-  'VSCode',
-  'Git',
-  'Kotlin',
-  'Android Studio',
-];
-
-const experienceTechStack = [
-  'Python',
-  'Next.js',
-  'MUI',
-  'Docker',
-  'SQLite',
-  'Blazor',
-  'C++',
-];
 
 function HomePage() {
   return (
@@ -94,36 +48,7 @@ function HomePage() {
           <PixelCat />
         </Window>
       </Stack>
-      <section className={styles.techStackSection}>
-        <Window title="tech_stack.md">
-          <Stack direction="vertical" gap="md" className={styles.techStack}>
-            <div>
-              <Text as="h2" variant="heading" size="lg">
-                {`> What I use the most`}
-              </Text>
-              <ul className={styles.techBadgeList}>
-                {primaryTechStack.map((tech) => (
-                  <li key={tech} className={styles.techBadge}>
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <Text as="h3" variant="heading" size="lg">
-                {`> Experience in`}
-              </Text>
-              <ul className={styles.techBadgeList}>
-                {experienceTechStack.map((tech) => (
-                  <li key={tech} className={styles.techBadge}>
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Stack>
-        </Window>
-      </section>
+      <TechStackSection />
       <ProjectShowcase projects={projects} />
     </div>
   );
