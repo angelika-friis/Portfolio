@@ -47,14 +47,14 @@ function MainLayout() {
 
       <footer className={styles.footer}></footer>
 
-      <Window
+      {/* <Window
         title="cat"
         className={styles.desktopCompanion}
         contentClassName={styles.companionContent}
         contentPadding={false}
       >
         <PixelCat className={styles.companionCat} size={92} />
-      </Window>
+      </Window> */}
     </>
   );
 }
