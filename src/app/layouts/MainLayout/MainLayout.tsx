@@ -46,12 +46,17 @@ function MainLayout() {
       </main>
 
       <footer className={styles.footer}>
-        <Stack direction="horizontal" align="center">
-          <ExternalLinkSolidIcon height="1rem" />
-          <Text as="p" weight="bold">
-            Check out project
-          </Text>
-        </Stack>
+        <a
+          href="https://github.com/angelika-friis/Portfolio"
+          className={styles.footerLink}
+        >
+          <Stack direction="horizontal" align="center">
+            <ExternalLinkSolidIcon height="1rem" />
+            <Text as="p" weight="bold">
+              Check out project
+            </Text>
+          </Stack>
+        </a>
         <nav className={styles.footerLinks} aria-label="Contact links">
           {contactLinks.map(({ href, icon }) => (
             <a key={href} href={href} className={styles.footerLink}>

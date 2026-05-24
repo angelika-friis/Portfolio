@@ -60,7 +60,7 @@
 .footerLink:hover,
 .footerLink:focus-visible {
   border-color: var(--color-border);
-  background-color: var(--color-primary-muted);
+  background-color: var(--color-accent);
   outline: none;
 }
 
