@@ -1,0 +1,60 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  background-color: rgb(0 0 0 / 70%);
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(920px, 100%);
+  height: min(780px, calc(100vh - 32px));
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-bg);
+  box-shadow: 8px 8px 0 var(--color-border);
+}
+
+.header {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm);
+  border-bottom: 2px solid var(--color-border);
+  background-color: var(--color-primary-muted);
+}
+
+.closeButton {
+  width: 40px;
+  height: 40px;
+}
+
+.frame {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  background-color: white;
+}
+
+.documentLink {
+  display: inline-flex;
+  gap: var(--space-sm);
+  align-items: center;
+  padding: var(--space-sm);
+  border-top: 2px solid var(--color-border);
+  color: var(--color-txt);
+  text-decoration: none;
+}
+
+.documentLink:hover,
+.documentLink:focus-visible {
+  background-color: var(--color-accent);
+  outline: none;
+}

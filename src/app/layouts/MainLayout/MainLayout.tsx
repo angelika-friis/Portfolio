@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Outlet } from 'react-router';
 import styles from './MainLayout.module.css';
 import { Button } from '../../../ui/components/Button';
@@ -7,9 +8,13 @@ import MoonIcon from '@iconify-react/pixelarticons/moon';
 import SunIcon from '@iconify-react/pixel/sun';
 import ExternalLinkSolidIcon from '@iconify-react/pixel/external-link-solid';
 import { contactLinks } from '../../data/contactLinks';
+import { DocumentPreview } from './components/DocumentPreview';
+
+const cvPdfPath = '/CV-Angelika-Friis-short-version.pdf';
 
 function MainLayout() {
   const { theme, setTheme } = useTheme();
+  const [isCvPreviewOpen, setIsCvPreviewOpen] = useState(false);
   const isDarkMode = theme === 'dark';
   const nextTheme = isDarkMode ? 'retro' : 'dark';
 
@@ -39,7 +44,25 @@ function MainLayout() {
             Full-stack Developer
           </Text>
         </Stack>
+
+        <Button
+          className={styles.CVButton}
+          variant="accent"
+          type="button"
+          aria-haspopup="dialog"
+          aria-expanded={isCvPreviewOpen}
+          onClick={() => setIsCvPreviewOpen(true)}
+        >
+          <Text variant="label">CV</Text>
+        </Button>
       </header>
+
+      <DocumentPreview
+        documentPath={cvPdfPath}
+        isOpen={isCvPreviewOpen}
+        title="CV preview"
+        onClose={() => setIsCvPreviewOpen(false)}
+      />
 
       <main className={styles.main}>
         <Outlet />

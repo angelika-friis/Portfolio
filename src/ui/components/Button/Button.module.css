@@ -8,6 +8,7 @@
   text-decoration: none;
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius);
+  cursor: pointer;
 }
 
 .accent {
