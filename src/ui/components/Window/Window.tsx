@@ -6,6 +6,7 @@ type Props = {
   className?: string;
   contentClassName?: string;
   contentPadding?: boolean;
+  onClose?: () => void;
 };
 
 export function Window({
@@ -14,6 +15,7 @@ export function Window({
   className,
   contentClassName,
   contentPadding = true,
+  onClose,
 }: Props) {
   const sectionClassName = className
     ? `${styles.section} ${className}`
@@ -31,9 +33,22 @@ export function Window({
         <div className={styles.header}>
           <span>{title}</span>
           <div className={styles.controls}>
-            <span className={styles.control} />
-            <span className={styles.control} />
-            <span className={`${styles.control} ${styles.red}`} />
+            {onClose ? (
+              <button
+                className={styles.closeButton}
+                type="button"
+                aria-label={`Close ${title}`}
+                onClick={onClose}
+              >
+                X
+              </button>
+            ) : (
+              <>
+                <span className={styles.control} />
+                <span className={styles.control} />
+                <span className={`${styles.control} ${styles.red}`} />
+              </>
+            )}
           </div>
         </div>
 

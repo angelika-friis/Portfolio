@@ -8,7 +8,7 @@ import MoonIcon from '@iconify-react/pixelarticons/moon';
 import SunIcon from '@iconify-react/pixel/sun';
 import ExternalLinkSolidIcon from '@iconify-react/pixel/external-link-solid';
 import { contactLinks } from '../../data/contactLinks';
-import { DocumentPreview } from './components/DocumentPreview';
+import { DocumentPreview } from '../../../ui/components/DocumentPreview';
 
 const cvPdfPath = '/CV-Angelika-Friis-short-version.pdf';
 

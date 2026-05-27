@@ -45,6 +45,28 @@
   background: var(--color-window-bg);
 }
 
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-window-bg);
+  color: var(--color-txt);
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+  background-color: var(--color-accent);
+  outline: none;
+}
+
 .red {
   background: red;
 }
