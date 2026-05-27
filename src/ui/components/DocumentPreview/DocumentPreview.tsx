@@ -11,12 +11,17 @@ type DocumentPreviewProps = {
   onClose: () => void;
 };
 
+const getPreviewDocumentPath = (documentPath: string) =>
+  `${documentPath}${documentPath.includes('#') ? '&' : '#'}page=1&zoom=page-fit&view=Fit`;
+
 export function DocumentPreview({
   documentPath,
   isOpen,
   title,
   onClose,
 }: DocumentPreviewProps) {
+  const previewDocumentPath = getPreviewDocumentPath(documentPath);
+
   useEffect(() => {
     if (!isOpen) {
       return;
@@ -58,7 +63,7 @@ export function DocumentPreview({
           <div className={styles.previewBody}>
             <iframe
               className={styles.frame}
-              src={documentPath}
+              src={previewDocumentPath}
               title={`${title} PDF preview`}
             />
 

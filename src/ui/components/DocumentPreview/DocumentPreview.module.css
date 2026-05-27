@@ -61,3 +61,27 @@
   background-color: var(--color-accent);
   outline: none;
 }
+
+@media (max-width: 640px) {
+  .overlay {
+    align-items: stretch;
+    padding: 0;
+  }
+
+  .dialog {
+    width: 100%;
+    height: 100dvh;
+  }
+
+  .previewWindow {
+    box-shadow: none;
+  }
+
+  .previewWindow > div {
+    border-width: 0;
+  }
+
+  .documentLink {
+    justify-content: center;
+  }
+}
