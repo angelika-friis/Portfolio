@@ -68,7 +68,7 @@
 }
 
 .red {
-  background: red;
+  background: var(--color-red);
 }
 
 .accent {
