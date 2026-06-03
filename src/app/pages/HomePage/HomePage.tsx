@@ -6,21 +6,23 @@ import { ContactButtons } from './components/ContactButton';
 import { Stack, Text } from '../../../ui/components/primitives';
 import { Window } from '../../../ui/components/Window/Window';
 import { contactLinks } from '../../data/contactLinks';
-import { projects } from '../../data/projects';
+import { useLanguage } from '../../i18n/useLanguage';
 import styles from './HomePage.module.css';
 
 function HomePage() {
+  const { t } = useLanguage();
+
   return (
     <div>
       <Stack direction="horizontal" className={styles.introSection} gap="xs">
         <Stack direction="vertical" className={styles.introCards} gap="xs">
           <Window title="hello.txt">
-            <Text as="p">{`> Hi! I'm Angelika.`}</Text>
-            <Text as="p">{`> I develop websites and apps.`}</Text>
+            <Text as="p">{t.home.intro.hello}</Text>
+            <Text as="p">{t.home.intro.role}</Text>
           </Window>
           <Window title="updates.txt">
-            <Text as="p">{`> Graduating summer 2026.`}</Text>
-            <Text as="p">{`> So... Need a full-stack developer?`}</Text>
+            <Text as="p">{t.home.intro.graduation}</Text>
+            <Text as="p">{t.home.intro.hiring}</Text>
           </Window>
         </Stack>
         <Window
@@ -33,12 +35,12 @@ function HomePage() {
       </Stack>
       <Stack direction="horizontal" className={styles.section2}>
         <Window title="about_me.txt">
-          <Text as="p">{`> I want to make websites and apps that are easy to use, secure and accessible for everyone.`}</Text>
-          <Text as="p">{`> I am graduating as a full-stack developer with a focus on web security in the MERN stack.`}</Text>
+          <Text as="p">{t.home.about.accessibility}</Text>
+          <Text as="p">{t.home.about.education}</Text>
         </Window>
         <Window title="contact.cfg">
           <Stack direction="vertical">
-            <Text as="p">Let's get in contact!</Text>
+            <Text as="p">{t.home.contact.heading}</Text>
             {contactLinks.map((contactLink) => (
               <ContactButtons key={contactLink.href} {...contactLink} />
             ))}
@@ -49,7 +51,7 @@ function HomePage() {
         </Window>
       </Stack>
       <TechStackSection />
-      <ProjectShowcase projects={projects} />
+      <ProjectShowcase projects={t.projects} />
     </div>
   );
 }
