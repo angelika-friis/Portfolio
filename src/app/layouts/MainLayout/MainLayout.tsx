@@ -13,7 +13,10 @@ import { DocumentPreview } from '../../../ui/components/DocumentPreview';
 import { useLanguage } from '../../i18n/useLanguage';
 import { isSupportedLanguage, type Language } from '../../i18n/translations';
 
-const cvPdfPath = '/CV-Angelika-Friis-short-version.pdf';
+const cvPdfPaths: Record<Language, string> = {
+  sv: '/CV-Angelika-Friis-kort-version.pdf',
+  en: '/CV-Angelika-Friis-short-version.pdf',
+};
 const languageOptions: { value: Language; label: string }[] = [
   { value: 'sv', label: 'Svenska' },
   { value: 'en', label: 'English' },
@@ -95,7 +98,7 @@ function MainLayout() {
       </header>
 
       <DocumentPreview
-        documentPath={cvPdfPath}
+        documentPath={cvPdfPaths[language]}
         isOpen={isCvPreviewOpen}
         title="CV preview"
         onClose={() => setIsCvPreviewOpen(false)}
