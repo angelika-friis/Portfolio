@@ -3,6 +3,7 @@ import type { Project } from '../../../../../types/project.ts';
 import { Window } from '../../../../../ui/components/Window/Window';
 import { Chip } from '../../../../../ui/components/Chip';
 import { Button } from '../../../../../ui/components/Button';
+import { useLanguage } from '../../../../i18n/useLanguage';
 import styles from './ProjectShowcase.module.css';
 
 type Props = {
@@ -10,6 +11,7 @@ type Props = {
 };
 
 export function ProjectShowcase({ projects }: Props) {
+  const { t } = useLanguage();
   const projectList = useMemo(() => Object.values(projects), [projects]);
   const [selectedProjectId, setSelectedProjectId] = useState(
     projectList[0]?.id ?? '',
@@ -23,7 +25,10 @@ export function ProjectShowcase({ projects }: Props) {
   }
 
   return (
-    <section className={styles.showcase} aria-label="Projects">
+    <section
+      className={styles.showcase}
+      aria-label={t.home.projects.sectionLabel}
+    >
       <Window
         title={selectedProject.fileName}
         className={styles.projectWindow}
@@ -32,7 +37,10 @@ export function ProjectShowcase({ projects }: Props) {
         <h2 className={styles.title}>{selectedProject.title}</h2>
         <p className={styles.description}>{selectedProject.description}</p>
 
-        <ul className={styles.techList} aria-label="Technologies used">
+        <ul
+          className={styles.techList}
+          aria-label={t.home.projects.technologiesLabel}
+        >
           {selectedProject.technologies.map((technology) => (
             <Chip key={technology}>{technology}</Chip>
           ))}
@@ -53,7 +61,10 @@ export function ProjectShowcase({ projects }: Props) {
         </div>
       </Window>
 
-      <nav className={styles.projectList} aria-label="Project list">
+      <nav
+        className={styles.projectList}
+        aria-label={t.home.projects.projectListLabel}
+      >
         {projectList.map((project) => {
           const isSelected = project.id === selectedProject.id;
 
