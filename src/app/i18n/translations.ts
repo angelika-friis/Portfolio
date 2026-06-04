@@ -4,6 +4,10 @@ export const supportedLanguages = ['en', 'sv'] as const;
 
 export type Language = (typeof supportedLanguages)[number];
 
+export function isSupportedLanguage(language?: string): language is Language {
+  return supportedLanguages.includes(language as Language);
+}
+
 type HomePageTranslations = {
   intro: {
     hello: string;

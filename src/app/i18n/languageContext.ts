@@ -9,7 +9,7 @@ type LanguageContextValue = {
 };
 
 export const LanguageContext = createContext<LanguageContextValue>({
-  language: 'en',
+  language: 'sv',
   setLanguage: () => undefined,
-  t: translations.en,
+  t: translations.sv,
 });

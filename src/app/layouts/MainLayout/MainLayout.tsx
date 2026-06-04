@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation, useNavigate } from 'react-router';
 import styles from './MainLayout.module.css';
 import { Button } from '../../../ui/components/Button';
 import { DropdownMenu } from '../../../ui/components/DropdownMenu';
@@ -11,7 +11,7 @@ import ExternalLinkSolidIcon from '@iconify-react/pixel/external-link-solid';
 import { contactLinks } from '../../data/contactLinks';
 import { DocumentPreview } from '../../../ui/components/DocumentPreview';
 import { useLanguage } from '../../i18n/useLanguage';
-import type { Language } from '../../i18n/translations';
+import { isSupportedLanguage, type Language } from '../../i18n/translations';
 
 const cvPdfPath = '/CV-Angelika-Friis-short-version.pdf';
 const languageOptions: { value: Language; label: string }[] = [
@@ -19,12 +19,30 @@ const languageOptions: { value: Language; label: string }[] = [
   { value: 'en', label: 'English' },
 ];
 
+function getLanguagePath(pathname: string, nextLanguage: Language) {
+  const pathSegments = pathname.split('/').filter(Boolean);
+  const [, ...remainingSegments] = pathSegments;
+  const localizedSegments = isSupportedLanguage(pathSegments[0])
+    ? [nextLanguage, ...remainingSegments]
+    : [nextLanguage, ...pathSegments];
+
+  return `/${localizedSegments.join('/')}`;
+}
+
 function MainLayout() {
   const { theme, setTheme } = useTheme();
   const { language, setLanguage } = useLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isCvPreviewOpen, setIsCvPreviewOpen] = useState(false);
   const isDarkMode = theme === 'dark';
   const nextTheme = isDarkMode ? 'retro' : 'dark';
+  const selectLanguage = (nextLanguage: Language) => {
+    setLanguage(nextLanguage);
+    navigate(
+      `${getLanguagePath(location.pathname, nextLanguage)}${location.search}${location.hash}`,
+    );
+  };
 
   return (
     <>
@@ -47,7 +65,7 @@ function MainLayout() {
             title="Språk"
             options={languageOptions}
             selectedValue={language}
-            onSelect={setLanguage}
+            onSelect={selectLanguage}
           />
         </div>
 

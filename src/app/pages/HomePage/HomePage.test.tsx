@@ -12,7 +12,7 @@ test('renders all HomePage sections', () => {
   expect(screen.getByText('my_companion.img')).toBeInTheDocument();
   expect(screen.getByText('tech_stack.md')).toBeInTheDocument();
 
-  expect(screen.getByText('> What I use the most')).toBeInTheDocument();
-  expect(screen.getByText('> Experience in')).toBeInTheDocument();
-  expect(screen.getByRole('region', { name: 'Projects' })).toBeInTheDocument();
+  expect(screen.getByText('> Det jag använder mest')).toBeInTheDocument();
+  expect(screen.getByText('> Erfarenhet av')).toBeInTheDocument();
+  expect(screen.getByRole('region', { name: 'Projekt' })).toBeInTheDocument();
 });

@@ -9,7 +9,7 @@ type LanguageProviderProps = {
 
 export function LanguageProvider({
   children,
-  defaultLanguage = 'en',
+  defaultLanguage = 'sv',
 }: LanguageProviderProps) {
   const [language, setLanguage] = useState<Language>(defaultLanguage);
 
