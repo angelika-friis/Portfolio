@@ -70,6 +70,26 @@ export const translations: Translations = {
       },
     },
     projects: {
+      pixelPattern: {
+        id: 'pixelPattern',
+        title: 'pixle-pattern',
+        fileName: 'pixel-pattern.exe',
+        description:
+          'Pixel Grid is a web-based tool for creating pixel patterns that can be used for projects such as crochet and cross-stitch. Images are processed directly in the browser, which means that no image data is sent to a server. This is a deliberate choice to avoid handling personal data at this stage. I started developing the project because I could not find a free tool that included all the features I needed for my own creative projects. Another purpose of the project was to learn more about developing with code agents.',
+        technologies: ['TypeScript'],
+        links: [
+          {
+            label: 'Show demo',
+            href: 'https://pixelpattern.netlify.app/',
+            variant: 'accent',
+          },
+          {
+            label: 'Source Code',
+            href: 'https://github.com/angelika-friis/pixel-pattern-maker',
+            variant: 'primary',
+          },
+        ],
+      },
       posApp: {
         id: 'posApps',
         title: 'POS app',
@@ -86,21 +106,6 @@ export const translations: Translations = {
           {
             label: 'Demo source code',
             href: 'https://github.com/angelika-friis/pos-integration-demo',
-            variant: 'primary',
-          },
-        ],
-      },
-      weather: {
-        id: 'weather',
-        title: 'Weather prognosis',
-        fileName: 'weather-prognosis.exe',
-        description:
-          'Search for weather prognosis with sunrise and sunset for a location or current location. Favorited locations are stored locally in a cookie.',
-        technologies: ['React', 'Cookies', 'Geolocation', 'CSS'],
-        links: [
-          {
-            label: 'Source Code',
-            href: 'https://github.com/angelika-friis/weather-prognosis',
             variant: 'primary',
           },
         ],
@@ -189,6 +194,26 @@ export const translations: Translations = {
       },
     },
     projects: {
+      pixelPattern: {
+        id: 'pixelPattern',
+        title: 'pixle-pattern',
+        fileName: 'pixel-pattern.exe',
+        description:
+          'Pixel Grid är ett webbaserat verktyg för att skapa pixelmönster som kan användas till exempelvis virkning och korsstygn. Verktyget hanterar bilder direkt i webbläsaren, vilket innebär att ingen bilddata skickas till en server. Detta är ett medvetet val för att i nuläget undvika hantering av personuppgifter. Jag började utveckla projektet eftersom jag saknade ett gratis verktyg med de funktioner jag själv behövde för mina egna kreativa projekt. Ett annat syfte med projektet var att lära mig mer om hur det är att utveckla med kod-agenter.',
+        technologies: ['TypeScript'],
+        links: [
+          {
+            label: 'Visa demo',
+            href: 'https://pixelpattern.netlify.app/',
+            variant: 'accent',
+          },
+          {
+            label: 'Källkod',
+            href: 'https://github.com/angelika-friis/pixel-pattern-maker',
+            variant: 'primary',
+          },
+        ],
+      },
       posApp: {
         id: 'posApps',
         title: 'POS-app',
@@ -205,21 +230,6 @@ export const translations: Translations = {
           {
             label: 'Demo-källkod',
             href: 'https://github.com/angelika-friis/pos-integration-demo',
-            variant: 'primary',
-          },
-        ],
-      },
-      weather: {
-        id: 'weather',
-        title: 'Väderprognos',
-        fileName: 'weather-prognosis.exe',
-        description:
-          'Sök efter väderprognoser med soluppgång och solnedgång för en plats eller din nuvarande position. Favoritplatser sparas lokalt i en cookie.',
-        technologies: ['React', 'Cookies', 'Geolocation', 'CSS'],
-        links: [
-          {
-            label: 'Källkod',
-            href: 'https://github.com/angelika-friis/weather-prognosis',
             variant: 'primary',
           },
         ],
