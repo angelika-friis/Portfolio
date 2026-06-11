@@ -26,7 +26,7 @@ function HomePage() {
           </Window>
         </Stack>
         <Window
-          title="clouds.img"
+          title="cloudy_day.img"
           contentPadding={false}
           className={styles.cloudWindow}
         >

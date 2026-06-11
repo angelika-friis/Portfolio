@@ -6,8 +6,9 @@ import { DropdownMenu } from '../../../ui/components/DropdownMenu';
 import { Stack, Text } from '../../../ui/components/primitives';
 import { useTheme } from '../../../ui/theme/useTheme';
 import MoonIcon from '@iconify-react/pixelarticons/moon';
-import SunIcon from '@iconify-react/pixel/sun';
-import ExternalLinkSolidIcon from '@iconify-react/pixel/external-link-solid';
+import BrightnessHighIcon from '@iconify-react/pixel/brightness-high';
+import CogIcon from '@iconify-react/pixel/cog';
+import ExternalLinkIcon from '@iconify-react/pixel/external-link-solid';
 import { contactLinks } from '../../data/contactLinks';
 import { DocumentPreview } from '../../../ui/components/DocumentPreview';
 import { useLanguage } from '../../i18n/useLanguage';
@@ -59,16 +60,21 @@ function MainLayout() {
             aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
             onClick={() => setTheme(nextTheme)}
           >
-            {isDarkMode ? <SunIcon height="1em" /> : <MoonIcon height="1em" />}
+            {isDarkMode ? (
+              <BrightnessHighIcon height="1em" />
+            ) : (
+              <MoonIcon height="1em" />
+            )}
           </Button>
 
           <DropdownMenu
             label="Language/språk"
-            triggerAriaLabel="Välj språk / Choose language"
+            triggerAriaLabel="Språk / Language"
             title="Språk"
             options={languageOptions}
             selectedValue={language}
             onSelect={selectLanguage}
+            icon={<CogIcon height="1.3em" />}
           />
         </div>
 
@@ -114,7 +120,7 @@ function MainLayout() {
           className={styles.footerLink}
         >
           <Stack direction="horizontal" align="center">
-            <ExternalLinkSolidIcon height="1rem" />
+            <ExternalLinkIcon height="1rem" />
             <Text as="p" weight="bold">
               Check out project
             </Text>

@@ -1,4 +1,5 @@
 import styles from './Window.module.css';
+import TimesSolidIcon from '@iconify-react/pixel/times-solid';
 
 type Props = {
   title: string;
@@ -40,7 +41,7 @@ export function Window({
                 aria-label={`Close ${title}`}
                 onClick={onClose}
               >
-                X
+                <TimesSolidIcon height="1em" />
               </button>
             ) : (
               <>

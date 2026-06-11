@@ -1,5 +1,11 @@
-import { useEffect, useRef, useState, type RefObject } from 'react';
-import { Text } from '../primitives';
+import {
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+  type RefObject,
+} from 'react';
+import { Stack, Text } from '../primitives';
 import styles from './DropdownMenu.module.css';
 
 type DropdownOption<Value extends string> = {
@@ -15,6 +21,7 @@ type DropdownMenuProps<Value extends string> = {
   onSelect: (value: Value) => void;
   triggerAriaLabel?: string;
   className?: string;
+  icon: ReactNode;
 };
 
 type DropdownMenuOptionsProps<Value extends string> = {
@@ -98,6 +105,7 @@ export function DropdownMenu<Value extends string>({
   onSelect,
   triggerAriaLabel,
   className,
+  icon,
 }: DropdownMenuProps<Value>) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -120,7 +128,10 @@ export function DropdownMenu<Value extends string>({
         onClick={() => setIsOpen((current) => !current)}
         type="button"
       >
-        <Text as="span">{label}</Text>
+        <Stack direction="horizontal" align="center">
+          {icon && icon}
+          <Text as="span">{label}</Text>
+        </Stack>
       </button>
 
       {isOpen ? (
