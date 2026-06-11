@@ -31,6 +31,9 @@ type HomePageTranslations = {
     technologiesLabel: string;
     projectListLabel: string;
   };
+  footer: {
+    projectLink: string;
+  };
 };
 
 type Translations = Record<
@@ -67,6 +70,9 @@ export const translations: Translations = {
         sectionLabel: 'Projects',
         technologiesLabel: 'Technologies used',
         projectListLabel: 'Project list',
+      },
+      footer: {
+        projectLink: 'Check out the code',
       },
     },
     projects: {
@@ -171,8 +177,8 @@ export const translations: Translations = {
       intro: {
         hello: '> Hej! Jag heter Angelika.',
         role: '> Jag utvecklar webbplatser och appar.',
-        graduation: '> Tar examen sommaren 2026.',
-        hiring: '> Så... Behöver ni en fullstackutvecklare?',
+        graduation: '> Jag tar examen sommaren 2026.',
+        hiring: '> Så... Behöver du en fullstackutvecklare?',
       },
       about: {
         accessibility:
@@ -191,6 +197,9 @@ export const translations: Translations = {
         sectionLabel: 'Projekt',
         technologiesLabel: 'Tekniker som används',
         projectListLabel: 'Projektlista',
+      },
+      footer: {
+        projectLink: 'Kika på koden',
       },
     },
     projects: {

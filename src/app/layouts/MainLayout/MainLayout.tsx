@@ -36,6 +36,7 @@ function getLanguagePath(pathname: string, nextLanguage: Language) {
 function MainLayout() {
   const { theme, setTheme } = useTheme();
   const { language, setLanguage } = useLanguage();
+  const { t } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
   const [isCvPreviewOpen, setIsCvPreviewOpen] = useState(false);
@@ -122,7 +123,7 @@ function MainLayout() {
           <Stack direction="horizontal" align="center">
             <ExternalLinkIcon height="1rem" />
             <Text as="p" weight="bold">
-              Check out project
+              {t.home.footer.projectLink}
             </Text>
           </Stack>
         </a>
