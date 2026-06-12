@@ -6,7 +6,7 @@ test('renders all HomePage sections', () => {
 
   expect(screen.getByText('hello.txt')).toBeInTheDocument();
   expect(screen.getByText('updates.txt')).toBeInTheDocument();
-  expect(screen.getByText('clouds.img')).toBeInTheDocument();
+  expect(screen.getByText('cloudy_day.img')).toBeInTheDocument();
   expect(screen.getByText('about_me.txt')).toBeInTheDocument();
   expect(screen.getByText('contact.cfg')).toBeInTheDocument();
   expect(screen.getByText('my_companion.img')).toBeInTheDocument();
