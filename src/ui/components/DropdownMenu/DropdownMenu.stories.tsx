@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 import { DropdownMenu } from './DropdownMenu';
+import TranslateSolidIcon from '@iconify-react/pixel/translate-solid';
 
 type StoryLanguage = 'sv' | 'en';
 
@@ -30,6 +31,7 @@ export const Language: Story = {
     options: languageOptions,
     selectedValue: 'sv',
     onSelect: fn(),
+    icon: <TranslateSolidIcon height="2em" />,
   },
   render: (args) => {
     const [language, setLanguage] = useState<StoryLanguage>(

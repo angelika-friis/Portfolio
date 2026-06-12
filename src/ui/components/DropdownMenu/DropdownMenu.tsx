@@ -21,7 +21,7 @@ type DropdownMenuProps<Value extends string> = {
   onSelect: (value: Value) => void;
   triggerAriaLabel?: string;
   className?: string;
-  icon: ReactNode;
+  icon?: ReactNode;
 };
 
 type DropdownMenuOptionsProps<Value extends string> = {
