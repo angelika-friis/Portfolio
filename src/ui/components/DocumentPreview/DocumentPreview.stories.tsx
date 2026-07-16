@@ -35,6 +35,7 @@ export const WithTrigger: Story = {
           documentPath="/cv-short-version.pdf"
           isOpen={isOpen}
           title="CV preview"
+          openDocText="Open PDF in new tab"
           onClose={() => setIsOpen(false)}
         />
       </>

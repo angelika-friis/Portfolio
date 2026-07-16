@@ -31,6 +31,10 @@ type HomePageTranslations = {
     technologiesLabel: string;
     projectListLabel: string;
   };
+  cvPreview: {
+    title: string;
+    openDoc: string;
+  };
   footer: {
     projectLink: string;
   };
@@ -70,6 +74,10 @@ export const translations: Translations = {
         sectionLabel: 'Projects',
         technologiesLabel: 'Technologies used',
         projectListLabel: 'Project list',
+      },
+      cvPreview: {
+        title: 'CV preview',
+        openDoc: 'Open PDF in new tab',
       },
       footer: {
         projectLink: 'Check out the code',
@@ -197,6 +205,10 @@ export const translations: Translations = {
         sectionLabel: 'Projekt',
         technologiesLabel: 'Tekniker som används',
         projectListLabel: 'Projektlista',
+      },
+      cvPreview: {
+        title: 'CV förhandsvisning',
+        openDoc: 'Öppna PDF i ny flik',
       },
       footer: {
         projectLink: 'Kika på koden',

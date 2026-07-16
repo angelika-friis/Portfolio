@@ -8,6 +8,7 @@ type DocumentPreviewProps = {
   documentPath: string;
   isOpen: boolean;
   title: string;
+  openDocText: string;
   onClose: () => void;
 };
 
@@ -18,6 +19,7 @@ export function DocumentPreview({
   documentPath,
   isOpen,
   title,
+  openDocText,
   onClose,
 }: DocumentPreviewProps) {
   const previewDocumentPath = getPreviewDocumentPath(documentPath);
@@ -64,7 +66,7 @@ export function DocumentPreview({
             <iframe
               className={styles.frame}
               src={previewDocumentPath}
-              title={`${title} PDF preview`}
+              title={title}
             />
 
             <a
@@ -75,7 +77,7 @@ export function DocumentPreview({
               <Stack direction="horizontal" align="center">
                 <ExternalLinkSolidIcon height="1rem" />
                 <Text as="p" weight="bold">
-                  Open PDF in new tab
+                  {openDocText}
                 </Text>
               </Stack>
             </a>

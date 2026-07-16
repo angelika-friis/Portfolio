@@ -107,7 +107,8 @@ function MainLayout() {
       <DocumentPreview
         documentPath={cvPdfPaths[language]}
         isOpen={isCvPreviewOpen}
-        title="CV preview"
+        title={t.home.cvPreview.title}
+        openDocText={t.home.cvPreview.openDoc}
         onClose={() => setIsCvPreviewOpen(false)}
       />
 
