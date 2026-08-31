@@ -54,14 +54,14 @@ export const translations: Translations = {
       intro: {
         hello: "> Hi! I'm Angelika.",
         role: '> I develop websites and apps.',
-        graduation: '> Graduating summer 2026.',
+        graduation: '> Just graduated! :))',
         hiring: '> So... Need a full-stack developer?',
       },
       about: {
         accessibility:
           '> I want to make websites and apps that are easy to use, secure and accessible for everyone.',
         education:
-          '> I am graduating as a full-stack developer with a focus on web security in the MERN stack.',
+          '> I am graduated as a full-stack developer with a focus on web security in the MERN stack.',
       },
       contact: {
         heading: "Let's get in contact!",
@@ -185,14 +185,14 @@ export const translations: Translations = {
       intro: {
         hello: '> Hej! Jag heter Angelika.',
         role: '> Jag utvecklar webbplatser och appar.',
-        graduation: '> Jag tar examen sommaren 2026.',
+        graduation: '> Jag tog precis examen! :)).',
         hiring: '> Så... Behöver du en fullstackutvecklare?',
       },
       about: {
         accessibility:
           '> Jag vill skapa webbplatser och appar som är enkla att använda, säkra och tillgängliga för alla.',
         education:
-          '> Jag tar examen som fullstackutvecklare med fokus på webbsäkerhet i MERN-stacken.',
+          '> Jag tog examen som fullstackutvecklare med fokus på webbsäkerhet i MERN-stacken.',
       },
       contact: {
         heading: 'Hör gärna av dig!',

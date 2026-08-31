@@ -19,5 +19,6 @@ export const experienceTechStack = [
   'Docker',
   'SQLite',
   'Blazor',
-  'C++',
+  'C#',
+  '.NET',
 ];
