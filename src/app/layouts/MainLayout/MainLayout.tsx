@@ -15,8 +15,8 @@ import { useLanguage } from '../../i18n/useLanguage';
 import { isSupportedLanguage, type Language } from '../../i18n/translations';
 
 const cvPdfPaths: Record<Language, string> = {
-  sv: '/CV-Angelika-Friis-kort-version.pdf',
-  en: '/CV-Angelika-Friis-short-version.pdf',
+  sv: '/CV Angelika Friis sv.pdf',
+  en: '/CV Angelika Friis en.pdf',
 };
 const languageOptions: { value: Language; label: string }[] = [
   { value: 'sv', label: 'Svenska' },
