@@ -109,8 +109,15 @@ export const translations: Translations = {
         title: 'POS app',
         fileName: 'pos-app.exe',
         description:
-          'I worked in a team to develop a POS application. I implemented the integration layer and worked on application logic and databases.',
-        technologies: ['Kotlin', 'Android native', 'SDK-integration'],
+          'In my six month internship I worked in a team to develop a POS application for a handheld payment terminal running on Android. I implemented the integration layer for the payment service and the terminals functions. I also worked on application logic and databases.',
+        technologies: [
+          'Kotlin',
+          'Android native',
+          'SDK-integration',
+          'Room',
+          'SQLite',
+          'Compose',
+        ],
         links: [
           {
             label: 'View showcase / doc site',
@@ -240,8 +247,15 @@ export const translations: Translations = {
         title: 'POS-app',
         fileName: 'pos-app.exe',
         description:
-          'Jag arbetade i ett team som utvecklade en POS-applikation. Jag implementerade integrationslagret och arbetade med applikationslogik och databaser.',
-        technologies: ['Kotlin', 'Android native', 'SDK-integration'],
+          'Under min sex månaders LIA arbetade jag i ett team som utvecklade en POS-applikation på en handhållen betalterminal. Jag implementerade integrationslagret till betalningstjänsten och betalterminalens hårdvara. Jag arbetade även med applikationslogik och databaser.',
+        technologies: [
+          'Kotlin',
+          'Android native',
+          'SDK-integration',
+          'Room',
+          'SQLite',
+          'Compose',
+        ],
         links: [
           {
             label: 'Visa showcase / dokumentation',
